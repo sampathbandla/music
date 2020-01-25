@@ -1,0 +1,245 @@
+ #mymenud {
+    line-height: 1;
+    display:inline-block;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 1px rgba(150, 149, 149, 0.59);
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#mymenud:after, #mymenud>div> ul:after,#mymenud #menu-button:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+#mymenud >div> ul > li:first-child {
+    border-radius: 5px 0 0 5px;
+}
+#mymenud > div>ul > li:last-child {
+    border-radius: 0 5px 5px 0;
+ 
+}
+#mymenud ul,#mymenud li,#mymenud a, #mymenud #menu-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+#mymenud a{
+  text-decoration:none;
+}
+
+#mymenud>div>ul ul li a i {
+    margin-right: 3px;
+}
+
+#mymenud #menu-button i{
+  float:right;
+}
+#mymenud >div> ul > li {
+   background-color: #f0f0f0; 
+  
+   background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+    border-right: 1px solid rgba(9, 9, 9, 0.125);
+    box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+    float: left;
+}
+
+#mymenud >div> ul > li > a {
+    padding: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .2s ease;
+     color: #5d5d5d;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    z-index: 2;
+    text-decoration: none !important;
+    white-space: nowrap;
+    display: block;
+    font-size: 12px;
+}
+#mymenud >div> ul > li.has-sub > a {
+    padding-right: 25px;
+}
+
+#mymenud #menu-button {
+    display: none;
+    padding: 15px;
+    padding: 15px;
+    color: #333;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom,#fff,#fafafa);
+    border-radius: 4px;
+    cursor: pointer;
+}
+#mymenud ul ul li a {
+	  color: #333;
+    font-size: 14px;
+    padding-right: 9px;
+    white-space: nowrap;
+}
+
+#mymenud ul ul li:hover{
+ background-image: linear-gradient(to right, rgba(225, 225, 225, 0.5), rgba(202, 202, 202, 0.05) 50%, rgba(221, 221, 221, 0.5));
+}
+
+@media screen and (min-width: 500px) {
+#mymenud >div>ul>li:hover > ul {
+    left: auto;
+}
+#mymenud ul ul li{
+      padding: 8px 10px 8px 13px;
+}
+#mymenud >div>ul ul{
+    background: transparent;
+    border-radius: 4px;
+    padding-top:4px;
+    min-width: 100%;
+}
+
+#mymenud >div> ul ul li{
+  background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #f3f3f3 51%);
+  border-top:1px solid rgba(189, 185, 185, 0.72);
+  border-left:1px solid rgba(189, 185, 185, 0.72);
+  border-right:1px solid rgba(189, 185, 185, 0.72);
+  box-shadow: 0 1px 1px 0.3px rgba(0, 0, 0, 0.15);
+}
+
+#mymenud >div> ul ul li:first-child {
+    border-radius: 5px 5px 0 0;
+}
+#mymenud > div>ul ul li:last-child {
+    border-radius: 0 0 5px 5px; 
+    border-bottom:1px solid rgba(189, 185, 185, 0.72);
+}
+#mymenud >div>ul>li ul li:hover  ul {
+    left: calc(100% + 2px);
+    top:0px;
+}
+
+#mymenud ul ul {
+    position: absolute;
+    left: -9999px;
+}
+#mymenud ul li:hover > ul > li {
+    height: 32px;
+}
+#mymenud ul ul li {
+    height: 0;
+    transition: height .2s ease;
+}
+
+#mymenud >div> ul > li.has-sub > a::after {
+    position: absolute;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    content: "\f107";
+    font-family: fontAwesome;
+ }
+#mymenud ul ul li.has-sub > a::after {
+   position: absolute;
+    right: 0px;
+    width: 4px;
+    height: 4px;
+    content: "\f105";
+    font-family: fontAwesome;
+    color: inherit;
+}
+#mymenud >div> ul > li:hover:after{
+    opacity: 1;
+}
+
+#mymenud >div> ul > li:after{
+    content: '.';
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background-image: linear-gradient(to right, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.05) 50%, rgba(202, 202, 202, 0.5));
+    transition: 0.25s all;
+}
+}
+
+@media only screen and (max-width: 500px) {
+    #mymenud {
+     width: 100%;
+    }
+    #menu-line {
+     display: none;
+    }
+    #menu-button {
+      display: block !important;
+    }
+    #mymenud>div>ul,#mymenud ul ul, #mymenud ul ul ul{
+          display: none;
+    }
+    #mymenud>ul>li {
+        float: none;
+        display: block;       
+     }
+     #mymenud ul li{
+       width: 100%;
+       height: auto;
+       border-top: 1px solid rgba(120, 120, 120, 0.15);
+     }
+    #mymenud ul ul, #mymenud ul ul ul {
+    position: relative;
+    left: 0;
+    right: auto;
+    width: 100%;
+    margin: 0;
+    }
+#mymenud ul ul li a{
+     width: 100%;
+    background: rgba(105, 103, 103, 0.48);
+    color: #fff;
+    font-size: 12px;
+    padding: 12px;
+}
+#mymenud >div> ul > li.has-sub > a::after {
+    position: absolute;
+    top: 6px;
+    right: 24px;
+    font-size: 1.6em;
+    width: 4px;
+    height: 4px;
+    content: "\f107";
+    font-family: fontAwesome;
+}
+
+#mymenud >div> ul > li.has-sub.active > a::after{
+  content: "\f106";
+}
+
+#mymenud ul ul li.has-sub > a::after {
+   position: absolute;
+    font-size: 1.6em;
+    top: 9px;
+    right: 32px;
+    width: 4px;
+    height: 4px;
+    content: "\f196";
+    font-family: fontAwesome;
+    color: #ddd;
+}
+#mymenud ul ul li.has-sub.active > a::after{
+  content:"\f147"
+  }
+  #mymenud >div> ul > li{
+    background-image:linear-gradient(to bottom,#ffffff,#f8f8f8)
+  }
+}

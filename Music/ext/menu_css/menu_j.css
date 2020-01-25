@@ -1,0 +1,120 @@
+
+#mymenuj{
+    background: #fff;
+    padding-left: 3px;
+    padding-right: 3px;
+	color: #0091ea;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    border-bottom: 1px solid rgba(107,180,214,0.32);
+}  
+  
+#mymenuj ul{
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+
+#mymenuj>ul{
+	height:100%;
+}
+
+#mymenuj>ul>li{
+  float:left;
+  position:relative;
+  height:100%;
+} 
+#mymenuj>ul ul li a i {
+    margin-right: 3px;
+}
+#mymenuj>ul>li ul{
+  min-width:100%;
+      position: absolute;
+      left: 0;
+      top:100%;    
+      border: 1px solid rgba(25,157,217,0.2);
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+#mymenuj> ul > li.has-sub > a::after {
+   position: absolute;
+    right: 8px;
+    width: 4px;
+    margin-top: 1px;
+    height: 4px;
+    content: "\f107";
+    font-family: fontAwesome;
+}
+
+#mymenuj ul ul li.has-sub > a::after {
+       position: absolute;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    content: "\f105";
+    font-family: fontAwesome;
+}
+
+#mymenuj>ul>li>ul ul{
+      left: calc( 100% + 2px );
+    top: 0px;
+}
+#mymenuj>ul>li>ul{
+  position:absolute;
+  top:100%;
+  left:0px;
+}
+#sitemap2:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+
+#mymenuj>ul>li ul{
+  display:none;
+  top:100%;
+  background-color:#fff;
+}
+
+#mymenuj a{
+text-decoration:none;
+    font-weight: 400;
+    text-decoration: none;
+    color:inherit;
+	font-size: 14px;
+	height:100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+	overflow: hidden;
+    display: block;
+	 white-space: nowrap;
+}
+
+#mymenuj>ul ul li a{
+  padding: 0.8em 1.3em 0.8em 0.8em;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#mymenuj>ul ul li:last-child a{
+   border-bottom:none;
+}
+
+#mymenuj .has-sub:hover > ul {
+      display: block;
+}
+
+@media all and (max-width: 660px){
+    
+   #sitemap2{
+    display:none !important;
+  }
+
+   .menu_sel,#sitemap_g{
+    display: block !important;
+    margin: 5px auto !important;
+    width: 199px;
+    padding: 4px !important;
+   }
+}
+

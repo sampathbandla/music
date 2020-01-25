@@ -1,0 +1,25 @@
+ #mymenul{
+    box-sizing: border-box;
+	background: #0078D7;
+	color:#fff;
+	font-family: 'Roboto', sans-serif;
+  }
+  #mymenul ul{
+	margin: 0;
+    padding: 0;
+    list-style: none;	
+  }
+  #mymenul ul li{
+    display:inline-block;
+  }
+  #mymenul ul li a{
+    color: inherit;
+    outline: 0;
+    text-decoration: none;
+	display: block;
+    padding: 1.25em 1.5em;
+    transition: background-color ease-out .5s;
+  }
+  #mymenul ul li  a:hover{
+    background-color: #006cc1;
+  }

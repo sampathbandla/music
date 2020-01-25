@@ -1,0 +1,226 @@
+#mymenue {
+    line-height: 1;
+    display:inline-block;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#mymenue:after, #mymenue>div> ul:after,#mymenue #menu-button:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+#mymenue ul,#mymenue li,#mymenue a, #mymenue #menu-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+#mymenue a{
+  text-decoration:none;
+}
+
+#mymenue>div>ul ul li a i {
+    margin-right: 3px;
+}
+
+#mymenue #menu-button i{
+  float:right;
+}
+
+
+#mymenue >div> ul > li  a{
+     text-decoration: none;
+    text-transform: uppercase;
+    transition: color .2s ease;
+	  color: #333;
+    font-size: 14px;
+    padding-right: 9px;
+    white-space: nowrap;
+  
+}
+#mymenue >div> ul > li > a {
+    padding: 12px;   
+    
+    white-space: nowrap;
+}
+
+
+
+#mymenue >div> ul > li.has-sub > a {
+    padding-right: 25px;
+}
+
+#mymenue #menu-button {
+    display: none;
+    padding: 15px;
+    padding: 15px;
+    color: #333;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom,#fff,#fafafa);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 500px) {
+#mymenue >div>ul>li:hover > ul {
+    left: auto;
+}
+#mymenue ul ul li{
+      padding: 8px 10px 8px 13px;
+}
+#mymenue >div>ul ul{
+    background: transparent;
+    border-radius: 4px;
+    padding-top: 3px;
+    min-width: 100%;
+}
+#mymenue >div>ul>li ul li:hover  ul {
+    left: calc(100% + 2px);
+    top:0px;
+}
+#mymenue >div> ul  li{
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #5d5d5d;
+    border-top: 1px solid #5d5d5d;
+    border-right: 1px solid #5d5d5d;
+    background: linear-gradient(to bottom, #8a8a8a 0%, #707070 50%, #626262 51%, #787878 100%);
+    
+}
+#mymenue >div> ul > li {
+    float: left;
+}
+#mymenue >div> ul > li:first-child {
+    border-radius: 5px 0 0 5px;
+    border-left: 1px solid #5d5d5d;
+}
+#mymenue > div>ul > li:last-child {
+    border-radius: 0 5px 5px 0; 
+}
+
+#mymenue >div> ul ul li:first-child {
+    border-radius: 5px 5px 0 0;
+}
+#mymenue > div>ul ul li:last-child {
+    border-radius: 0 0 5px 5px;  
+}
+#mymenue ul ul {
+    position: absolute;
+    left: -9999px;
+}
+#mymenue ul li:hover > ul > li {
+    height: 32px;
+}
+#mymenue ul ul li {
+    height: 0;
+    transition: height .2s ease;
+}
+#mymenue >div> ul > li a{
+    text-shadow: 0 -1px 0 #333333;
+    z-index: 2;
+    color: #ffffff;
+}
+#mymenue >div> ul > li.has-sub > a::after {
+    position: absolute;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    content: "\f107";
+    font-family: fontAwesome;
+ }
+#mymenue ul ul li.has-sub > a::after {
+   position: absolute;
+    right: 0px;
+    width: 4px;
+    height: 4px;
+    content: "\f105";
+    font-family: fontAwesome;
+    color: inherit;
+}
+#mymenue >div> ul  li:hover{
+   background: linear-gradient(to bottom, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+    #mymenue {
+     width: 100%;
+    }
+    #menu-line {
+     display: none;
+    }
+    #menu-button {
+      display: block !important;
+    }
+    #mymenue>div>ul,#mymenue ul ul, #mymenue ul ul ul{
+          display: none;
+    }
+    #mymenue>ul>li {
+        float: none;
+        display: block;       
+     }
+     #mymenue ul li{
+       width: 100%;
+       height: auto;
+       border-top: 1px solid rgba(120, 120, 120, 0.15);
+     }
+    #mymenue ul ul, #mymenue ul ul ul {
+    position: relative;
+    left: 0;
+    right: auto;
+    width: 100%;
+    margin: 0;
+    }
+#mymenue ul ul li a{
+     width: 100%;
+    background: rgba(105, 103, 103, 0.48);
+    color: #fff;
+    font-size: 12px;
+    padding: 12px;
+}
+#mymenue >div> ul > li.has-sub > a::after {
+    position: absolute;
+    top: 6px;
+    right: 24px;
+    font-size: 1.6em;
+    width: 4px;
+    height: 4px;
+    content: "\f107";
+    font-family: fontAwesome;
+}
+
+#mymenue >div> ul > li.has-sub.active > a::after{
+  content: "\f106";
+}
+#mymenue ul  a{
+   color:#333;  
+}
+
+#mymenue ul ul li.has-sub > a::after {
+   position: absolute;
+    font-size: 1.6em;
+    top: 9px;
+    right: 32px;
+    width: 4px;
+    height: 4px;
+    content: "\f196";
+    font-family: fontAwesome;
+    color: #ddd;
+}
+#mymenue ul ul li.has-sub.active > a::after{
+  content:"\f147"
+  }
+  #mymenue >div> ul > li{
+    background-image:linear-gradient(to bottom,#ffffff,#f8f8f8)
+  }
+}
