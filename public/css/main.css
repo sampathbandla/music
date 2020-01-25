@@ -1,48 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 * {
-  outline: none;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.dark {
-  color: white;
+body {
   background: black;
+  color: white;
 }
 
-hr {
-  background: inherit;
-}
-
-.header {
-  padding: 10px;
+.sidebar {
+  max-width: 300px;
+  width: 30%;
+  background: rgba(247, 247, 247, 0.048);
+  position: fixed;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: none;
 }
 
-.header .left .brand img {
-  width: 30px;
-}
-
-.header .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.header .right .buttongroup {
+.sidebar .brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,49 +38,256 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 15px;
-  font-weight: normal;
+  padding-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FF5042;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.header .right .buttongroup .register {
-  margin-right: 20px;
+.sidebar .brand img {
+  text-align: center;
+  width: 50px;
+  margin-bottom: 10px;
 }
 
-.header .center {
+.sidebar hr {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: gray;
+}
+
+.sidebar .account {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
 }
 
-.header .center #searchtxt {
-  width: 100%;
-  background: none;
-  border: solid 1px white;
-  padding: 5px;
-  border-right: none;
+.sidebar .account a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 80%;
 }
 
-.header .center button {
-  background: none;
-  color: inherit;
-  border: solid 1px white;
-  border-left: none;
-  padding: 5px;
+.sidebar .account .login {
+  background-color: #FF2A66;
+}
+
+.sidebar .account .register {
+  background-color: #FF583B;
+}
+
+.sidebar .queue {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar .queue h4 {
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.sidebar .queue .song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .queue .song .imgwithheart img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sidebar .queue .song .imgwithheart i {
+  position: relative;
+  left: -20px;
+  top: 10px;
+}
+
+.sidebar .queue .song .details .songname {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+  width: 100px;
+}
+
+.sidebar .queue .song .details .movie {
+  font-weight: 100;
+  font-size: 10px;
+  color: #838383;
+}
+
+.sidebar .queue .song .menubtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: auto;
+}
+
+.sidebar .queue .song:hover {
+  background-color: rgba(128, 128, 128, 0.144);
   cursor: pointer;
 }
 
-body::-webkit-scrollbar {
-  width: 1em;
+.sidebar .queue::-webkit-scrollbar {
+  width: 0px;
 }
 
-body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+.sidebar .queue::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+.sidebar .queue::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.sidebar .queue::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.player {
+  background-color: rgba(247, 247, 247, 0.048);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 80px;
+  min-width: calc(100% - 300px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.player .playeractions {
+  padding-left: 20px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player .playeractions .moviedetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.player .playeractions .moviedetails .songname {
+  font-size: 15px;
+}
+
+.player .playeractions .moviedetails .moviename {
+  margin-left: 10px;
+  font-size: 12px;
+  color: gray;
+  background-color: rgba(0, 0, 0, 0.514);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.player .playeractions .actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player .playeractions .actions .nextprevpause {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player .playeractions .actions .nextprevpause i {
+  font-size: 30px;
+}
+
+.player .playeractions .actions .nextprevpause svg {
+  fill: white;
+}
+
+.player .playeractions .progress {
+  width: 70%;
+  background-color: white;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+}
+
+.player .playeractions .progress .progressgoingon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FF583B;
+  display: block;
+}
+
+.search input {
+  padding: 5px;
 }
 /*# sourceMappingURL=main.css.map */

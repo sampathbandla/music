@@ -8,13 +8,184 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/index.css">
-
-
+    <link rel="stylesheet" href="/css/fa/css/all.css">
+    
+    <script src="/js/jquery.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/jquery.js"></script>
 </head>
 <body class="dark">
+    <div class="sidebar">
+        <div class="brand">
+            <img src="/images/Logo.png" alt="">
+            Music
+        </div><br>
+        <div class="account">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+        </div>
+        <div class="queue" id="queue">
+            <h4>Queue</h4>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="imgwithheart">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
+                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
+                </div>
+                <div class="details">
+                    <p class="songname">He’S Soo Cute</p>
+                    <p class="movie">Saaho - 2019</p>
+                </div>
+                <div class="menubtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
 
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="playeractions">
+            <div class="moviedetails">
+                <p class="songname">Bad Boy</p>
+                <p class="moviename">Saaho - 2019</p>
+            </div>
+            <div class="actions">
+                <div class="nextprevpause">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path class="fill_path" fill-rule="evenodd" d="M7.556 19.222V5H4v14.222h3.556zm12.444 0V5L9.333 12.111 20 19.222z"></path></svg>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<svg width="24" height="24" id="Layer_1" enable-background="new 0 0 511.448 511.448" viewBox="0 0 511.448 511.448" xmlns="http://www.w3.org/2000/svg"><path d="m436.508 74.94c-99.913-99.913-261.64-99.928-361.567 0-99.913 99.913-99.928 261.64 0 361.567 99.913 99.913 261.64 99.928 361.567 0 99.912-99.912 99.927-261.639 0-361.567zm-180.784 394.45c-117.816 0-213.667-95.851-213.667-213.667s95.851-213.666 213.667-213.666 213.666 95.851 213.666 213.667-95.85 213.666-213.666 213.666z"/><path d="m298.39 160.057c-11.598 0-21 9.402-21 21v149.333c0 11.598 9.402 21 21 21s21-9.402 21-21v-149.333c0-11.598-9.401-21-21-21z"/><path d="m213.057 160.057c-11.598 0-21 9.402-21 21v149.333c0 11.598 9.402 21 21 21s21-9.402 21-21v-149.333c0-11.598-9.401-21-21-21z"/></svg>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<svg width="24" height="24" viewBox="0 0 24 24"><path class="fill_path" fill-rule="evenodd" d="M16.444 19.222V5H20v14.222h-3.556zM4 19.222V5l10.667 7.111L4 19.222z"></path></svg>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <p class="presentduration">00:00</p> &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="progress">
+                    <span class="progressgoingon"></span>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <p class="songduration">04:00</p> 
+
+            </div>
+        </div>
+    </div>
+
+    <div class="search">
+        <input type="text" class="search" placeholder="Search...">
+    </div>
 </body>
 </html>
