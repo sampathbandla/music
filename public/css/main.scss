@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    outline: none;
 }
 body
 {
@@ -70,6 +71,10 @@ body
         .register
         {
             background-color: $color2;
+        }
+        .username
+        {
+            margin-bottom: 5px;
         }
     }
     // .footer
@@ -169,8 +174,8 @@ body
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 70%;
     height: 80px;
+    width: 70%;
     min-width: calc(100% - 300px);
     display: flex;
     align-items: center;
@@ -205,6 +210,10 @@ body
             width: 100%;
             display: flex;
             align-items: center;
+            svg
+            {
+                cursor: pointer;
+            }
             .nextprevpause
             {
                 display: flex;
@@ -219,30 +228,192 @@ body
                 }
             }
         }
+        .presentduration
+        {
+            width: 40px;
+        }
         .progress
         {
             width: 70%;
             background-color: white;
             height: 5px;
-            display: flex;
-            align-items: center;
             border-radius: 50px;
-            .progressgoingon
-            {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $color2;
-                display: block;
-                
-            }
+            -webkit-appearance: none;
+            border-radius: 5px;  
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
         }
+        .progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%; 
+            background:  $color2;
+            cursor: pointer;
+          }
+          
+          .progress::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: $color2;
+            cursor: pointer;
+          }
     }
 }
 .search
 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
     input
     {
+        background-color: white;
         padding: 5px;
+        border-radius: 50px;
+    }
+    input::placeholder
+    {
+        color: black;
+    }
+}
+.mainbody
+{
+    width: calc(70% - 60px);
+    min-width: calc(100% - 360px);
+    height: calc(100% - 130px);
+    top: 50px;
+    position: absolute;
+    right: 0;
+    right: 20px;
+    .movie
+    {
+        padding: 10px;
+        margin-right: 40px;
+        cursor: pointer;
+        img
+        {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-position: top;
+            object-fit: cover;
+        }
+        .name
+        {
+            font-size: 15px;
+        }
+        .year
+        {
+            color: gray;
+            font-size: 12px;
+            width: fit-content;
+        }
+        .year:hover
+        {
+            color: $color2;
+        }
+        
+    }
+    .movie:hover
+    {
+        background-color: rgba(255, 255, 255, 0.055);
+    }
+    #viewmore
+    {
+        color: $color1;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    .movies
+    {
+        display: flex;
+        overflow-x: hidden;
+    }
+    .movies:hover
+    {
+        overflow-x: auto;
+    }
+}
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    border-radius: 20px;
+
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+.logindiv
+{
+    height: 100%;
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        input
+        {
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.144);
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        #username
+        {
+            border: solid 1px $color1;
+            color: $color2;
+        }
+        #password
+        {
+            border: solid 1px $color2;
+            color:$color1;
+        }
+        input::placeholder
+        {
+            color: white;
+        }
+        button
+        {
+            font-size: 15px;
+            text-transform: uppercase;
+            padding: 5px;
+            width: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgb(197, 197, 197);
+        }
+        button:hover
+        {
+            background-color: white;
+        }
     }
 }

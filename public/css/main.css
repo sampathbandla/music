@@ -3,6 +3,7 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -92,6 +93,10 @@ body {
 
 .sidebar .account .register {
   background-color: #FF583B;
+}
+
+.sidebar .account .username {
+  margin-bottom: 5px;
 }
 
 .sidebar .queue {
@@ -190,8 +195,8 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 70%;
   height: 80px;
+  width: 70%;
   min-width: calc(100% - 300px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,6 +254,10 @@ body {
           align-items: center;
 }
 
+.player .playeractions .actions svg {
+  cursor: pointer;
+}
+
 .player .playeractions .actions .nextprevpause {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,28 +275,221 @@ body {
   fill: white;
 }
 
+.player .playeractions .presentduration {
+  width: 40px;
+}
+
 .player .playeractions .progress {
   width: 70%;
   background-color: white;
   height: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50px;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
 
-.player .playeractions .progress .progressgoingon {
-  width: 10px;
-  height: 10px;
+.player .playeractions .progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background-color: #FF583B;
-  display: block;
+  background: #FF583B;
+  cursor: pointer;
+}
+
+.player .playeractions .progress::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #FF583B;
+  cursor: pointer;
+}
+
+.search {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .search input {
+  background-color: white;
   padding: 5px;
+  border-radius: 50px;
+}
+
+.search input::-webkit-input-placeholder {
+  color: black;
+}
+
+.search input:-ms-input-placeholder {
+  color: black;
+}
+
+.search input::-ms-input-placeholder {
+  color: black;
+}
+
+.search input::placeholder {
+  color: black;
+}
+
+.mainbody {
+  width: calc(70% - 60px);
+  min-width: calc(100% - 360px);
+  height: calc(100% - 130px);
+  top: 50px;
+  position: absolute;
+  right: 0;
+  right: 20px;
+}
+
+.mainbody .movie {
+  padding: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.mainbody .movie img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainbody .movie .name {
+  font-size: 15px;
+}
+
+.mainbody .movie .year {
+  color: gray;
+  font-size: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mainbody .movie .year:hover {
+  color: #FF583B;
+}
+
+.mainbody .movie:hover {
+  background-color: rgba(255, 255, 255, 0.055);
+}
+
+.mainbody #viewmore {
+  color: #FF2A66;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.mainbody .movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.mainbody .movies:hover {
+  overflow-x: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.logindiv {
+  height: 100%;
+}
+
+.logindiv form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logindiv form input {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.144);
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.logindiv form #username {
+  border: solid 1px #FF2A66;
+  color: #FF583B;
+}
+
+.logindiv form #password {
+  border: solid 1px #FF583B;
+  color: #FF2A66;
+}
+
+.logindiv form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.logindiv form input:-ms-input-placeholder {
+  color: white;
+}
+
+.logindiv form input::-ms-input-placeholder {
+  color: white;
+}
+
+.logindiv form input::placeholder {
+  color: white;
+}
+
+.logindiv form button {
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 5px;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #c5c5c5;
+}
+
+.logindiv form button:hover {
+  background-color: white;
 }
 /*# sourceMappingURL=main.css.map */

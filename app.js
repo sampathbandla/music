@@ -3,12 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var favicon = require('serve-favicon')
+var favicon = require('serve-favicon');
+const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
+app.use(session({secret: 'keyboard cat',cookie: {},resave: false,saveUninitialized: true,}))
 
 app.use(favicon(path.join(__dirname, 'public', 'images\\icon.png')))
 // view engine setup
@@ -22,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
