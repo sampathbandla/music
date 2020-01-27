@@ -21,7 +21,6 @@ var app = express();
   })
 app.use(session({secret: 'keyboard cat',cookie: {},resave: false,saveUninitialized: true,}))
 
-app.use(favicon(path.join(__dirname, 'public', 'images\\icon.png')))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
