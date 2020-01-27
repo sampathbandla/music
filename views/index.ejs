@@ -9,14 +9,30 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/fa/css/all.css">
+    <link rel="stylesheet" href="/js/rangeslider/rangeslider.css">
     
     <script src="/js/jquery.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/rangeslider/rangeslider.min.js"></script>
+    <script>
+        // Initialize a new plugin instance for all
+        // e.g. $('input[type="range"]') elements.
+        $('input[type="range"]').rangeslider();
+    
+        // Destroy all plugin instances created from the
+        // e.g. $('input[type="range"]') elements.
+        $('input[type="range"]').rangeslider('destroy');
+    
+        // Update all rangeslider instances for all
+        // e.g. $('input[type="range"]') elements.
+        // Usefull if you changed some attributes e.g. `min` or `max` etc.
+        $('input[type="range"]').rangeslider('update', true);
+    </script>
 </head>
 <body class="dark">
     <div class="sidebar">
-        <div class="brand">
+        <div style="cursor: pointer;" onclick="index()" class="brand">
             <img src="/images/Logo.png" alt="">
             Music
         </div><br>
@@ -27,138 +43,9 @@
                 <script>updateplayer()</script>
                 <% } %>
         </div>
+        <h4>Queue</h4>
         <div class="queue" id="queue">
-            <h4>Queue</h4>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
-            <div class="song">
-                <div class="imgwithheart">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNDExZjFiYjItMmM3OS00OGUxLTliMTctMzFhZDkzMmFhMzY1XkEyXkFqcGdeQXVyMTA1NTAyMjAw._V1_UY268_CR3,0,182,268_AL_.jpg" alt="">
-                    <i id="whitelistbtn" class="far fa-heart whitelistbtn"></i>
-                </div>
-                <div class="details">
-                    <p class="songname">He’S Soo Cute</p>
-                    <p class="movie">Saaho - 2019</p>
-                </div>
-                <div class="menubtn">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
+            <p id="empty" style="text-align: center;color: gray;" class="empty">Empty</p>
 
         </div>
     </div>
@@ -166,11 +53,11 @@
     <div class="player">
         <div class="playeractions">
             <div class="moviedetails">
-                <p class="songname">Bad Boy</p>
-                <p class="moviename">Saaho - 2019</p>
+                <p class="songname" id="playingsongname">Bad Boy</p>
+                <p class="moviename" id="playingmoviename">Saaho - 2019</p>
             </div>
             <div class="actions">
-                <audio ontimeupdate="playing()" id="player">
+                <audio onended="songended()" id="player">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="nextprevpause">
@@ -184,8 +71,18 @@
                 <p id="presentduration" class="presentduration">00:00</p> &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="range" onchange="rangechanged(this.value)" min="0" max="100" value="0" name="" class="progress" id="progress">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <p id="songduration" class="songduration">04:00</p> 
-
+                <p id="songduration" class="songduration">04:00</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-volume-up"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input
+                type="range"
+                min="0"                    
+                max="1"                  
+                step="0.1"                   
+                value="1"    
+                onchange="changevolume(this.value)"
+                
+                >
+                
             </div>
         </div>
     </div>

@@ -1,0 +1,28 @@
+
+<div class="movie-details">
+    <div class="movie-left">
+        <img src="<%= movie.imgurl %>" alt="">
+        <h4 class="movie-name">
+            <%= movie.name %>
+        </h4>
+        <p class="movie-year"><%= movie.year %></p>
+    </div>
+    <div class="movie-right">
+        <h4 class="title">Songs</h4><br>
+        <div class="songs">
+            <% movie.songs.forEach(function(song){ %>
+                <div class="song">
+                    <div class="left">
+                        <p class="song-name"><%= song.name %></p>
+                    </div>
+                    <div class="right">
+                        <a href="<%= song.url %>"><i class="fas fa-download"></i></a>
+                        <p onclick="changesong(this)" datasongname="<%= song.name %>" datamoviename="<%= movie.name %>" dataurl="<%= song.url %>" datayear="<%= movie.year %>" dataimg="<%= movie.imgurl %>" dataid="<%= movie._id %>" class="play-song"><i class="fas fa-play"></i></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/css/movie.css">

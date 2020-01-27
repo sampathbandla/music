@@ -1,5 +1,6 @@
 @import "colors";
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap');
+@import "fonts";
 *
 {
     font-family: 'Poppins', sans-serif;
@@ -113,6 +114,7 @@ body
                     width: 40px;
                     height: 40px;
                     object-fit: cover;
+                    margin-right:10px;
                 }
                 i
                 {
@@ -290,11 +292,17 @@ body
     position: absolute;
     right: 0;
     right: 20px;
+    overflow: auto;
     .movie
     {
         padding: 10px;
         margin-right: 40px;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        width: 150px;
         img
         {
             width: 100px;
@@ -302,10 +310,15 @@ body
             border-radius: 50%;
             object-position: top;
             object-fit: cover;
+            margin-bottom: 10px;
         }
         .name
         {
             font-size: 15px;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .year
         {
@@ -335,6 +348,7 @@ body
     {
         display: flex;
         overflow-x: hidden;
+        align-items: center;
     }
     .movies:hover
     {
@@ -415,5 +429,33 @@ body
         {
             background-color: white;
         }
+    }
+}
+
+.byalphabet
+{
+    display: flex;
+    flex-direction: column;
+    .alphabets
+    {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    a
+    {
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        padding: 15px;
+        font-size: 15px;
+    }
+    a:nth-child(even):hover
+    {
+        color: $color2;
+    }
+    a:nth-child(odd):hover
+    {
+        color: $color1;
     }
 }

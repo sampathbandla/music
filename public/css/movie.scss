@@ -1,0 +1,68 @@
+@import "colors";
+.movie-details
+{
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    .songs
+    {
+        width: 100%;
+    }
+    .song
+    {
+        
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 25px;
+        .left
+        {
+
+        }
+        .right
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a
+            {
+                color: white;
+                margin-right: 30px;
+            }
+            p
+            {
+                cursor: pointer;
+            }
+            p:hover i
+            {
+                color: $color1;
+            }
+        }
+    }
+    .movie-left
+    {
+        h4
+        {
+            text-align: center;
+        }
+        p
+        {
+            text-align: center;
+            color: gray;
+        }
+        img
+        {
+            border-radius: 50%;
+            width: 200px;
+            object-fit: cover;
+            height: 200px;
+            object-position: top;
+        }
+    }
+    .movie-right
+    {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+    }
+}
