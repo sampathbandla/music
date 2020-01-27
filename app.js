@@ -12,7 +12,13 @@ var songsrouter = require('./routes/songs');
 var adminrouter = require('./routes/admin');
 
 
+var port = (process.env.PORT || '3000');
 var app = express();
+  app.listen(port,(err) => {
+    if(err)
+    throw err
+    console.log("App Started!")
+  })
 app.use(session({secret: 'keyboard cat',cookie: {},resave: false,saveUninitialized: true,}))
 
 app.use(favicon(path.join(__dirname, 'public', 'images\\icon.png')))
