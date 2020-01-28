@@ -1,4 +1,5 @@
 document.queue = []
+document.pagestack = ['index']
 
 function addtoqueue(id,name,moviename,year,url,imgurl)
 {
@@ -104,7 +105,26 @@ function getmovie(id)
 
     $.ajax({url: "/song/movie?id=" + id, success: function(result){
         $("#mainbody").html(result)
+        history.pushState('movie.' + id,null,"?movie=" + id)
     }});
+}
+
+function getmoviewithoutpush(id)
+{
+
+    $.ajax({url: "/song/movie?id=" + id, success: function(result){
+        $("#mainbody").html(result)
+    }});
+}
+function back()
+{
+    if(document.pagestack[document.pagestack.length] == "movie")
+    {
+        if(document.pagestack[document.pagestack.length - 1] == "index")
+        {
+            index();
+        }
+    }
 }
 
 function index()
@@ -113,3 +133,19 @@ function index()
         $("#mainbody").html(result)
     }});
 }
+
+
+window.addEventListener('popstate', function(e) {
+    var state = e.state;
+    if(e.state == null)
+    {
+        index();
+    }
+    else
+    {
+        if(state.split(".")[0] == "movie")
+        {
+            getmoviewithoutpush(state.split(".")[1])
+        }
+    }
+});

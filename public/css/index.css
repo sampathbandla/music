@@ -54,13 +54,14 @@
     display: none;
   }
   .mainbody {
-    width: 100%;
+    width: 80%;
     right: 0;
     position: static;
     z-index: 1;
     height: calc(100% - 130px);
     margin-bottom: 100px;
-    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 80px;
   }
   .movie-details {
     -webkit-box-orient: vertical;
@@ -71,6 +72,7 @@
         -ms-flex-align: center;
             align-items: center;
     padding: 10px;
+    padding: 0 !important;
   }
   .movie-details .movie-left {
     display: -webkit-box;
