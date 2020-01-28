@@ -14,21 +14,7 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/rangeslider/rangeslider.min.js"></script>
-    <script>
-        // Initialize a new plugin instance for all
-        // e.g. $('input[type="range"]') elements.
-        $('input[type="range"]').rangeslider();
-    
-        // Destroy all plugin instances created from the
-        // e.g. $('input[type="range"]') elements.
-        $('input[type="range"]').rangeslider('destroy');
-    
-        // Update all rangeslider instances for all
-        // e.g. $('input[type="range"]') elements.
-        // Usefull if you changed some attributes e.g. `min` or `max` etc.
-        $('input[type="range"]').rangeslider('update', true);
-    </script>
+    <script src="/js/player.js"></script>
 </head>
 <body class="dark">
     <div class="sidebar">
@@ -37,8 +23,6 @@
             Music
         </div><br>
         <div class="account" id="account">
-            <a href="#" id="login" class="login">Login</a>
-            <a href="#" id="register" class="register">Register</a>
             <% if(login == true) {%>
                 <script>updateplayer()</script>
                 <% } %>
@@ -51,10 +35,16 @@
     </div>
 
     <div class="player">
+        <div class="mobile-player-timing">
+            <div id="mobile-played" class="played"></div>
+            <div id="mobile-not-played" class="not-played"></div>
+        </div>
         <div class="playeractions">
+            <p id="mobile-pause" class="mobile-pause"><svg onclick="play()"  width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-140.96875 0-256 115.050781-256 256 0 140.96875 115.050781 256 256 256 140.96875 0 256-115.050781 256-256 0-140.96875-115.050781-256-256-256zm0 482c-124.617188 0-226-101.382812-226-226s101.382812-226 226-226 226 101.382812 226 226-101.382812 226-226 226zm0 0"/><path d="m181 404.027344 222.042969-148.027344-222.042969-148.027344zm30-240 137.957031 91.972656-137.957031 91.972656zm0 0"/></svg></p>
             <div class="moviedetails">
                 <p class="songname" id="playingsongname">Bad Boy</p>
                 <p class="moviename" id="playingmoviename">Saaho - 2019</p>
+                <div class="mobile-player-btn"></div>
             </div>
             <div class="actions">
                 <audio onended="songended()" id="player">
@@ -87,6 +77,13 @@
         </div>
     </div>
 
+    <div class="mobileheader">
+        <!-- <h1>Music</h1> -->
+        <div class="buttongroup">
+            <img onclick="index()" src="/images/logo.png" alt="">
+        </div>
+
+    </div>
     <div class="search">
         <input type="text" class="search" placeholder="Search...">
     </div>

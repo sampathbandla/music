@@ -93,38 +93,7 @@ function login()
     
 
 }
-function updateplayer()
-{
-    $.ajax({url: "/user/getusername", success: function(result){
-        $("#account").html(`<p class="username" id="username">${result}</p>
-        <a href="#" class="register" onclick="logout()" id="logout">Logout</a>`)
-    }});
-    $.ajax({url: "/dashboard", success: function(result){
-        $("#mainbody").html(result)
-    }});
-    document.login = "YES"
-}
 
-function logout()
-{
-    $.ajax({url:"/user/logout",success:function(result){
-        if(result == true)
-        {
-            $.ajax({url: "/user/getusername", success: function(result){
-                $("#account").html(`
-                <a href="#" id="login" class="login">Login</a>
-                <a href="#" id="register" class="register">Register</a>`)
-            }});
-            $.ajax({url: "/dashboard", success: function(result){
-                $("#mainbody").html(result)
-            }});
-        }
-        else
-        {
-            alert("Something went wrong!")
-        }
-    }});
-}
 function changevolume(value)
 {
     document.player.volume = value

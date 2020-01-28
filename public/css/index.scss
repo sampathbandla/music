@@ -1,0 +1,134 @@
+@import "colors";
+.mobileheader
+{
+    display: none;
+}
+.mobile-pause
+{
+    display: none;
+}
+@media screen and (max-width:500px)
+{
+    .search
+    {
+        display: none;
+    }
+    .mobileheader
+    {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: solid 1px $color1;
+        margin-bottom: 20px;
+        img
+        {
+            width: 50px;
+        }
+        .buttongroup
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            margin-top: 10px;
+            .login
+            {
+                color: $color1;
+            }
+            .register
+            {
+                color: $color2;
+            }
+        }
+    }
+    .sidebar
+    {
+        display: none;
+    }
+    .mainbody
+    {
+        width: 100%;
+        right: 0;
+        position: static;
+        z-index: 1;
+        height: calc(100% - 130px);
+        margin-bottom: 100px;
+        padding: 15px;
+    }
+    .movie-details
+    {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        .movie-left
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        img
+        {
+            width: 100px!important;
+            height: 100px!important;
+        }
+        .movie-right
+        {
+            width: 100%!important;
+        }
+    }
+    .player
+    {
+        z-index: 100;
+        width: 100%;
+        background: rgb(35, 35, 35);
+        padding: 15px;
+        height: auto;
+        flex-direction: column;
+        padding-right: 0;
+        .player-actions
+        {
+            flex-direction: column;
+        }
+        .mobile-pause
+        {
+            font-size: 20px!important;
+            position: absolute;
+            left: 40px;
+            color: white;
+            display: block;
+            svg
+            {
+                fill: white;
+            }
+        }
+        .mobile-player-timing
+        {
+            width: 100%;
+            height: 5px;
+            display: flex;
+            position: relative;
+            bottom: 10px;
+            .played
+            {
+                width: 0%;
+                height: 5px;
+                background: $color1;
+            }
+            .not-played
+            {
+                width: 100%;
+                height: 5px;
+                background: white;
+            }
+        }
+        .actions
+        {
+            display: none!important;
+        }
+    }
+
+}
