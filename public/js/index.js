@@ -102,36 +102,30 @@ function changevolume(value)
 
 function getmovie(id)
 {
-
+    loadstart()
     $.ajax({url: "/song/movie?id=" + id, success: function(result){
         $("#mainbody").html(result)
         history.pushState('movie.' + id,null,"?movie=" + id)
     }});
+    loadend()
 }
 
 function getmoviewithoutpush(id)
 {
-
+    loadstart()
     $.ajax({url: "/song/movie?id=" + id, success: function(result){
         $("#mainbody").html(result)
     }});
-}
-function back()
-{
-    if(document.pagestack[document.pagestack.length] == "movie")
-    {
-        if(document.pagestack[document.pagestack.length - 1] == "index")
-        {
-            index();
-        }
-    }
+    loadend()
 }
 
 function index()
 {
+    loadstart()
     $.ajax({url: "/dashboard", success: function(result){
         $("#mainbody").html(result)
     }});
+    loadend()
 }
 
 
@@ -147,5 +141,32 @@ window.addEventListener('popstate', function(e) {
         {
             getmoviewithoutpush(state.split(".")[1])
         }
+        else
+        {
+            if(state.split(".")[0] == "alpha")
+            {
+                getmoviesbyalphawithoutpush(state.split(".")[1])
+            }
+            else
+            {
+                if(state.split(".")[0] == 'year')
+                {
+                    getmoviesbyyearwithoutpush(state.split(".")[1])
+                }
+            }
+        }
     }
 });
+
+function loadstart()
+{
+    $("#mainbody").addClass("loaderdiv");
+    $("#mainbody").html(`<div class="loader">
+    <div class="loader-wheel"></div>
+    <div class="loader-text"></div>
+  </div>`)
+}
+function loadend()
+{
+    $("#mainbody").removeClass("loaderdiv");
+}

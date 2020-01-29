@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var songsrouter = require('./routes/songs');
 var adminrouter = require('./routes/admin');
+var moviesrouter = require('./routes/movies');
 
 
 var port = (process.env.PORT || '3000');
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/song', songsrouter);
 app.use('/admin', adminrouter);
+app.use('/movies',moviesrouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

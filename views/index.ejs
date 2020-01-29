@@ -17,18 +17,14 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/player.js"></script>
+    <script src="/js/movies.js"></script>
 </head>
 <body class="dark">
     <div class="sidebar">
-        <div style="cursor: pointer;" onclick="" class="brand">
+        <div onclick="" class="brand">
             <img src="/images/Logo.png" alt="">
-            Music
+            Sangeetham
         </div><br>
-        <div class="account" id="account">
-            <% if(login == true) {%>
-                <script>updateplayer()</script>
-                <% } %>
-        </div>
         <h4>Queue</h4>
         <div class="queue" id="queue">
             <p id="empty" style="text-align: center;color: gray;" class="empty">Empty</p>
@@ -85,9 +81,6 @@
             <img src="/images/Logo.png" alt="">
         </div>
 
-    </div>
-    <div class="search">
-        <input type="text" class="search" placeholder="Search...">
     </div>
 
     <div class="mainbody" id="mainbody">

@@ -4,28 +4,16 @@ var moviescontroller = require("../controllers/movies")
 /* GET home page. */
 router.get('/', function(req, res, next) {
   moviescontroller.getmovies(function(result){
-
-    if(req.session.user)
-    {
-      res.render("index",{login:true,movies:result})
-    }
-    else
-    {
-      res.render("index",{login:false,movies:result})
-  
-    }
+    moviescontroller.getalphas((alphas,years) => {
+        res.render("index",{movies:result,alphas:alphas,years:years})
+    })
   })
 });
-router.get("/login",function(req,res) {
-  res.render("login");
-})
-router.get("/register",function(req,res) {
-  res.render("register");
-})
 router.get("/dashboard",(req,res) => {
-  moviescontroller.getmovies(function(result)
-  {
-    res.render("dashboard",{movies:result})
+  moviescontroller.getmovies(function(result){
+    moviescontroller.getalphas((alphas,years) => {
+        res.render("dashboard",{movies:result,alphas:alphas,years:years})
+    })
   })
 })
 router.get('/redirect',(req,res) => {

@@ -14,41 +14,16 @@
 <div class="byalphabet"><br>
     <h4 class="title">Get Movies by Alphabets</h4><br>
     <div class="alphabets">
-        <a href="/movies?aplha=a">A</a>
-        <a href="/movies?aplha=b">B</a>
-        <a href="/movies?aplha=c">C</a>
-        <a href="/movies?aplha=d">D</a>
-        <a href="/movies?aplha=e">E</a>
-        <a href="/movies?aplha=f">F</a>
-        <a href="/movies?aplha=g">G</a>
-        <a href="/movies?aplha=h">H</a>
-        <a href="/movies?aplha=i">I</a>
-        <a href="/movies?aplha=j">J</a>
-        <a href="/movies?aplha=k">K</a>
-        <a href="/movies?aplha=l">L</a>
-        <a href="/movies?aplha=m">M</a>
-        <a href="/movies?aplha=n">N</a>
-        <a href="/movies?aplha=o">O</a>
-        <a href="/movies?aplha=p">P</a>
-        <a href="/movies?aplha=q">Q</a>
-        <a href="/movies?aplha=r">R</a>
-        <a href="/movies?aplha=s">S</a>
-        <a href="/movies?aplha=t">T</a>
-        <a href="/movies?aplha=u">U</a>
-        <a href="/movies?aplha=v">V</a>
-        <a href="/movies?aplha=x">X</a>
-        <a href="/movies?aplha=y">Y</a>
-        <a href="/movies?aplha=z">Z</a>
+        <% alphas.forEach(function(alpha){ %>
+            <a onclick="getmoviesbyalpha(this.getAttribute('dataalpha'))" dataalpha="<%= alpha.toLowerCase() %>" ><%= alpha.toUpperCase() %></a>
+        <% }) %>
     </div>
 <div class="byyear"><br>
     <h4 class="title">Get Movies by Year</h4>
     <div class="years"><br>
-        <a href="/movies?year=2010">2010</a>
-        <a href="/movies?year=2011">2011</a>
-        <a href="/movies?year=2012">2012</a>
-        <a href="/movies?year=2013">2013</a>
-        <a href="/movies?year=2014">2014</a>
-        <a href="/movies?year=2015">2015</a>
+        <% years.forEach(function(year){ %>
+            <a onclick="getmoviesbyyear(this.getAttribute('datayear'))" datayear="<%= year.toLowerCase() %>""><%= year.toUpperCase() %></a>
+        <% }) %>
     </div><br>
 </div>  
 </div>

@@ -29,3 +29,59 @@ exports.getmovie = function getmovie(id,callback)
         
       });
 }
+
+exports.getalphas = function getalphas(callback)
+{
+    alphas = [];
+    years = [];
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("music");
+        dbo.collection("movies").find().toArray(function(err, result) {
+            for(var i = 0; i < result.length; i++)
+            {
+                if(!alphas.includes(result[i].name[0]))
+                {
+                    alphas.push(result[i].name[0]);
+                }
+                if(!years.includes(result[i].year))
+                {
+                    years.push(result[i].year)
+                }
+            }
+            alphas.sort();
+            callback(alphas,years)
+        });
+        
+    });
+}
+
+exports.getalphamovies = function getalphamovies(by,data,callback)
+{
+    movies = [];
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("music");
+        dbo.collection("movies").find().toArray(function(err, result) {
+            for(var i = 0; i < result.length; i++)
+            {
+                if(by == "alpha")
+                {
+                    if(result[i].name[0].toLowerCase() == data)
+                    {
+                        movies.push(result[i]);
+                    }
+                }
+                else
+                {
+                    if(result[i].year == data)
+                    {
+                        movies.push(result[i]);
+                    }
+                }
+            }
+            callback(movies)
+        });
+        
+    });
+}

@@ -1,0 +1,15 @@
+<h4>Movies</h4><br>
+<div class="movies">
+    <% movies.forEach(function(movie){ %>
+        <div onclick="getmovie(this.getAttribute('dataid'))" dataid="<%= movie._id %>"class="movie">
+            <img src="<%= movie.imgurl %>" alt="">
+            <p class="name"><%= movie.name %></p>
+            <p style="color: gray;" class="year"><%= movie.year %></p>
+        </div>
+    <% }) %>
+    
+</div>
+
+<style>
+    
+</style>
