@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var objid = require("mongodb").ObjectID;
-var url = "mongodb+srv://sam:sssU9989@music-lzmgx.mongodb.net/test?retryWrites=true&w=majority";
+var url = "mongodb+srv://admin:admin@cluster0.c2f9h.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 exports.getmovies = function getmovies(callback)
 {
